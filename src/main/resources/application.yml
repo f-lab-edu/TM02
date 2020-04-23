@@ -1,0 +1,34 @@
+# YAML 파일 사용이유
+# 1. 계층형 구성으로 설정 내용을 작성하여 properties 파일보다 중복된 내용을 줄여주며, 가독성이 좋습니다.
+# 2. 멀티 모듈 환경에 properties 파일을 적용하는 경우 각각의 문서를 생성하여 설정 파일 내용을 변경해주지만,
+#    YAML의 경우 문서를 나누는 기능('---')을 통해 하나의 설정 파일에서 구조화가 가능하여 보다 편리하게 관리 할 수 있습니다.
+server:
+  address: localhost
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Food_Service?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: vldkfdkdl1!23
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+#    generate-ddl: true
+    hibernate:
+      format_sql: true
+      ddl-auto: create
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
