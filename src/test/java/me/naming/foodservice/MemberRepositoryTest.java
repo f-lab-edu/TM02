@@ -14,6 +14,6 @@ public class MemberRepositoryTest {
 
   @Test
   public void add () {
-    memberRepository.save(new Member("JOIN", "naming", "naming@gmail.com", "01022021812"));
+    memberRepository.save(new Member("DELETE", "naming", "naming@gmail.com", "01022021812"));
   }
 }
